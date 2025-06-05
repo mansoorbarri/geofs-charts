@@ -386,7 +386,7 @@
     },
     "OTHH": {
         "name": "Hamad International Airport",
-        "taxi_chart_url": "https://opennav.com/diagrams/OTHH.svg",
+        "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/othh/taxiways.png?raw=true",
         "info_url": "https://skyvector.com/airport/OTHH/Hamad-International-Airport"
     },
     "RCTP": {
