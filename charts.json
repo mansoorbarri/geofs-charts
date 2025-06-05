@@ -6,15 +6,62 @@
     },
     "KSFO": {
         "name": "San Francisco International",
-        "taxi_chart_url": "https://i.imgur.com/KSFO_taxi.png",
-        "info_url": "https://example.com/KSFO_info.html"
+        "taxi_chart_url": "https://opennav.com/diagrams/KSFO.svg",
+        "info_url": "https://skyvector.com/airport/KSFO/San-Francisco-International-Airport"
     },
     "EDDM": {
         "name": "Munich Airport",
-        "taxi_chart_url": "https://i.imgur.com/EDDM_taxi.png"
+        "taxi_chart_url": "https://opennav.com/diagrams/EDDM.svg",
+        "info_url": "https://skyvector.com/airport/EDDM/Munich-Airport"
     },
     "NZQN": {
         "name": "Queenstown Airport",
-        "taxi_chart_url": "https://i.imgur.com/NZQN_taxi.png"
+        "taxi_chart_url": "https://opennav.com/diagrams/NZQN.svg",
+        "info_url": "https://skyvector.com/airport/NZQN/Queenstown-Airport"
+    },
+    "KATL": {
+        "name": "Hartsfield-Jackson Atlanta International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KATL.svg",
+        "info_url": "https://skyvector.com/airport/KATL/Hartsfield-Jackson-Atlanta-International-Airport"
+    },
+    "OMDB": {
+        "name": "Dubai International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/OMDB.svg",
+        "info_url": "https://skyvector.com/airport/OMDB/Dubai-International-Airport"
+    },
+    "KDFW": {
+        "name": "Dallas/Fort Worth International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KDFW.svg",
+        "info_url": "https://skyvector.com/airport/KDFW/Dallas-Fort-Worth-International-Airport"
+    },
+    "RJTT": {
+        "name": "Tokyo Haneda Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/RJTT.svg",
+        "info_url": "https://skyvector.com/airport/RJTT/Tokyo-Haneda-Airport"
+    },
+    "KDEN": {
+        "name": "Denver International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KDEN.svg",
+        "info_url": "https://skyvector.com/airport/KDEN/Denver-International-Airport"
+    },
+    "KORD": {
+        "name": "O'Hare International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KORD.svg",
+        "info_url": "https://skyvector.com/airport/KORD/OHare-International-Airport"
+    },
+    "LTFM": {
+        "name": "Istanbul Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LTFM.svg",
+        "info_url": "https://skyvector.com/airport/LTFM/Istanbul-Airport"
+    },
+    "VIDP": {
+        "name": "Indira Gandhi International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/VIDP.svg",
+        "info_url": "https://skyvector.com/airport/VIDP/Indira-Gandhi-International-Airport"
+    },
+    "ZSPD": {
+        "name": "Shanghai Pudong International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZSPD.svg",
+        "info_url": "https://skyvector.com/airport/ZSPD/Shanghai-Pudong-International-Airport"
     }
 }
