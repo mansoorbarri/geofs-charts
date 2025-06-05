@@ -1,8 +1,8 @@
 {
     "EGLL": {
         "name": "London Heathrow",
-        "taxi_chart_url": "https://i.imgur.com/EGLL_taxi.png",
-        "info_url": "https://example.com/EGLL_info.html"
+        "taxi_chart_url": "https://opennav.com/diagrams/EGLL.svg",
+        "info_url": "https://skyvector.com/airport/EGLL/London-Heathrow-Airport"
     },
     "KSFO": {
         "name": "San Francisco International",
