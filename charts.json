@@ -1,0 +1,622 @@
+{
+    "DAAG": {
+        "name": "Houari Boumediene Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/DAAG.svg",
+        "info_url": "https://skyvector.com/airport/DAAG/Houari-Boumediene-Airport"
+    },
+    "DGAA": {
+        "name": "Kotoka International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/DGAA.svg",
+        "info_url": "https://skyvector.com/airport/DGAA/Kotoka-International-Airport"
+    },
+    "DNAA": {
+        "name": "Nnamdi Azikiwe International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/DNAA.svg",
+        "info_url": "https://skyvector.com/airport/DNAA/Nnamdi-Azikiwe-International-Airport"
+    },
+    "DNMM": {
+        "name": "Murtala Muhammed International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/DNMM.svg",
+        "info_url": "https://skyvector.com/airport/DNMM/Murtala-Muhammed-International-Airport"
+    },
+    "DRRN": {
+        "name": "Diori Hamani International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/DRRN.svg",
+        "info_url": "https://skyvector.com/airport/DRRN/Diori-Hamani-International-Airport"
+    },
+    "DTTA": {
+        "name": "Tunis–Carthage International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/DTTA.svg",
+        "info_url": "https://skyvector.com/airport/DTTA/Tunis-Carthage-International-Airport"
+    },
+    "EBBR": {
+        "name": "Brussels Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EBBR.svg",
+        "info_url": "https://skyvector.com/airport/EBBR/Brussels-Airport"
+    },
+    "EDDM": {
+        "name": "Munich Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EDDM.svg",
+        "info_url": "https://skyvector.com/airport/EDDM/Munich-Airport"
+    },
+    "EDDF": {
+        "name": "Frankfurt Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EDDF.svg",
+        "info_url": "https://skyvector.com/airport/EDDF/Frankfurt-Airport"
+    },
+    "EDDT": {
+        "name": "Berlin Brandenburg Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EDDB.svg",
+        "info_url": "https://skyvector.com/airport/EDDB/Berlin-Brandenburg-Airport"
+    },
+    "EFHK": {
+        "name": "Helsinki-Vantaa Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EFHK.svg",
+        "info_url": "https://skyvector.com/airport/EFHK/Helsinki-Vantaa-Airport"
+    },
+    "EGCC": {
+        "name": "Manchester Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EGCC.svg",
+        "info_url": "https://skyvector.com/airport/EGCC/Manchester-Airport"
+    },
+    "EGLL": {
+        "name": "London Heathrow",
+        "taxi_chart_url": "https://opennav.com/diagrams/EGLL.svg",
+        "info_url": "https://skyvector.com/airport/EGLL/London-Heathrow-Airport"
+    },
+    "EGBB": {
+        "name": "Birmingham Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EGBB.svg",
+        "info_url": "https://skyvector.com/airport/EGBB/Birmingham-Airport"
+    },
+    "EGPF": {
+        "name": "Glasgow Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EGPF.svg",
+        "info_url": "https://skyvector.com/airport/EGPF/Glasgow-Airport"
+    },
+    "EHAM": {
+        "name": "Amsterdam Airport Schiphol",
+        "taxi_chart_url": "https://opennav.com/diagrams/EHAM.svg",
+        "info_url": "https://skyvector.com/airport/EHAM/Amsterdam-Airport-Schiphol"
+    },
+    "EIDW": {
+        "name": "Dublin Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EIDW.svg",
+        "info_url": "https://skyvector.com/airport/EIDW/Dublin-Airport"
+    },
+    "EKCH": {
+        "name": "Copenhagen Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EKCH.svg",
+        "info_url": "https://skyvector.com/airport/EKCH/Copenhagen-Airport"
+    },
+    "ELLX": {
+        "name": "Luxembourg Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ELLX.svg",
+        "info_url": "https://skyvector.com/airport/ELLX/Luxembourg-Airport"
+    },
+    "EPWA": {
+        "name": "Warsaw Chopin Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/EPWA.svg",
+        "info_url": "https://skyvector.com/airport/EPWA/Warsaw-Chopin-Airport"
+    },
+    "ESSA": {
+        "name": "Stockholm Arlanda Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ESSA.svg",
+        "info_url": "https://skyvector.com/airport/ESSA/Stockholm-Arlanda-Airport"
+    },
+    "FAOR": {
+        "name": "OR Tambo International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/FAOR.svg",
+        "info_url": "https://skyvector.com/airport/FAOR/OR-Tambo-International-Airport"
+    },
+    "FACT": {
+        "name": "Cape Town International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/FACT.svg",
+        "info_url": "https://skyvector.com/airport/FACT/Cape-Town-International-Airport"
+    },
+    "FLLH": {
+        "name": "Lisbon Portela Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LPPT.svg",
+        "info_url": "https://skyvector.com/airport/LPPT/Lisbon-Portela-Airport"
+    },
+    "GCLP": {
+        "name": "Gran Canaria Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/GCLP.svg",
+        "info_url": "https://skyvector.com/airport/GCLP/Gran-Canaria-Airport"
+    },
+    "GMAD": {
+        "name": "Mohammed V International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/GMMN.svg",
+        "info_url": "https://skyvector.com/airport/GMMN/Mohammed-V-International-Airport"
+    },
+    "GOOY": {
+        "name": "Léopold Sédar Senghor International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/GOOY.svg",
+        "info_url": "https://skyvector.com/airport/GOOY/Leopold-Sedar-Senghor-International-Airport"
+    },
+    "HAAB": {
+        "name": "Addis Ababa Bole International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/HAAB.svg",
+        "info_url": "https://skyvector.com/airport/HAAB/Addis-Ababa-Bole-International-Airport"
+    },
+    "HECA": {
+        "name": "Cairo International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/HECA.svg",
+        "info_url": "https://skyvector.com/airport/HECA/Cairo-International-Airport"
+    },
+    "HKJK": {
+        "name": "Jomo Kenyatta International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/HKJK.svg",
+        "info_url": "https://skyvector.com/airport/HKJK/Jomo-Kenyatta-International-Airport"
+    },
+    "KATL": {
+        "name": "Hartsfield-Jackson Atlanta International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KATL.svg",
+        "info_url": "https://skyvector.com/airport/KATL/Hartsfield-Jackson-Atlanta-International-Airport"
+    },
+    "KCLT": {
+        "name": "Charlotte Douglas International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KCLT.svg",
+        "info_url": "https://skyvector.com/airport/KCLT/Charlotte-Douglas-International-Airport"
+    },
+    "KDEN": {
+        "name": "Denver International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KDEN.svg",
+        "info_url": "https://skyvector.com/airport/KDEN/Denver-International-Airport"
+    },
+    "KDFW": {
+        "name": "Dallas/Fort Worth International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KDFW.svg",
+        "info_url": "https://skyvector.com/airport/KDFW/Dallas-Fort-Worth-International-Airport"
+    },
+    "KJFK": {
+        "name": "John F. Kennedy International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KJFK.svg",
+        "info_url": "https://skyvector.com/airport/KJFK/John-F-Kennedy-International-Airport"
+    },
+    "KLAX": {
+        "name": "Los Angeles International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KLAX.svg",
+        "info_url": "https://skyvector.com/airport/KLAX/Los-Angeles-International-Airport"
+    },
+    "KLAS": {
+        "name": "Harry Reid International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KLAS.svg",
+        "info_url": "https://skyvector.com/airport/KLAS/Harry-Reid-International-Airport"
+    },
+    "KMCO": {
+        "name": "Orlando International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KMCO.svg",
+        "info_url": "https://skyvector.com/airport/KMCO/Orlando-International-Airport"
+    },
+    "KMIA": {
+        "name": "Miami International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KMIA.svg",
+        "info_url": "https://skyvector.com/airport/KMIA/Miami-International-Airport"
+    },
+    "KORD": {
+        "name": "O'Hare International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KORD.svg",
+        "info_url": "https://skyvector.com/airport/KORD/OHare-International-Airport"
+    },
+    "KSFO": {
+        "name": "San Francisco International",
+        "taxi_chart_url": "https://opennav.com/diagrams/KSFO.svg",
+        "info_url": "https://skyvector.com/airport/KSFO/San-Francisco-International-Airport"
+    },
+    "KSEA": {
+        "name": "Seattle–Tacoma International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/KSEA.svg",
+        "info_url": "https://skyvector.com/airport/KSEA/Seattle-Tacoma-International-Airport"
+    },
+    "LFPG": {
+        "name": "Charles de Gaulle Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LFPG.svg",
+        "info_url": "https://skyvector.com/airport/LFPG/Charles-de-Gaulle-Airport"
+    },
+    "LFPO": {
+        "name": "Paris Orly Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LFPO.svg",
+        "info_url": "https://skyvector.com/airport/LFPO/Paris-Orly-Airport"
+    },
+    "LGAV": {
+        "name": "Athens International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LGAV.svg",
+        "info_url": "https://skyvector.com/airport/LGAV/Athens-International-Airport"
+    },
+    "LHBP": {
+        "name": "Budapest Ferenc Liszt International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LHBP.svg",
+        "info_url": "https://skyvector.com/airport/LHBP/Budapest-Ferenc-Liszt-International-Airport"
+    },
+    "LIMM": {
+        "name": "Milan Malpensa Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LIMM.svg",
+        "info_url": "https://skyvector.com/airport/LIMM/Milan-Malpensa-Airport"
+    },
+    "LIML": {
+        "name": "Milan Linate Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LIML.svg",
+        "info_url": "https://skyvector.com/airport/LIML/Milan-Linate-Airport"
+    },
+    "LIRF": {
+        "name": "Leonardo da Vinci–Fiumicino Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LIRF.svg",
+        "info_url": "https://skyvector.com/airport/LIRF/Leonardo-da-Vinci-Fiumicino-Airport"
+    },
+    "LKPR": {
+        "name": "Václav Havel Airport Prague",
+        "taxi_chart_url": "https://opennav.com/diagrams/LKPR.svg",
+        "info_url": "https://skyvector.com/airport/LKPR/Vaclav-Havel-Airport-Prague"
+    },
+    "LLBG": {
+        "name": "Ben Gurion Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LLBG.svg",
+        "info_url": "https://skyvector.com/airport/LLBG/Ben-Gurion-Airport"
+    },
+    "LPPR": {
+        "name": "Porto Airport (Francisco Sá Carneiro Airport)",
+        "taxi_chart_url": "https://opennav.com/diagrams/LPPR.svg",
+        "info_url": "https://skyvector.com/airport/LPPR/Porto-Airport-Francisco-Sa-Carneiro-Airport"
+    },
+    "LRBS": {
+        "name": "Henri Coandă International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LRBS.svg",
+        "info_url": "https://skyvector.com/airport/LRBS/Henri-Coanda-International-Airport"
+    },
+    "LROP": {
+        "name": "Bucharest Henri Coandă International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LROP.svg",
+        "info_url": "https://skyvector.com/airport/LROP/Bucharest-Henri-Coanda-International-Airport"
+    },
+    "LSGG": {
+        "name": "Geneva Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LSGG.svg",
+        "info_url": "https://skyvector.com/airport/LSGG/Geneva-Airport"
+    },
+    "LSZH": {
+        "name": "Zurich Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LSZH.svg",
+        "info_url": "https://skyvector.com/airport/LSZH/Zurich-Airport"
+    },
+    "LSZB": {
+        "name": "Bern Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LSZB.svg",
+        "info_url": "https://skyvector.com/airport/LSZB/Bern-Airport"
+    },
+    "LTFM": {
+        "name": "Istanbul Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LTFM.svg",
+        "info_url": "https://skyvector.com/airport/LTFM/Istanbul-Airport"
+    },
+    "LOWW": {
+        "name": "Vienna International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LOWW.svg",
+        "info_url": "https://skyvector.com/airport/LOWW/Vienna-International-Airport"
+    },
+    "LYBE": {
+        "name": "Belgrade Nikola Tesla Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LYBE.svg",
+        "info_url": "https://skyvector.com/airport/LYBE/Belgrade-Nikola-Tesla-Airport"
+    },
+    "LEBL": {
+        "name": "Josep Tarradellas Barcelona–El Prat Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LEBL.svg",
+        "info_url": "https://skyvector.com/airport/LEBL/Josep-Tarradellas-Barcelona-El-Prat-Airport"
+    },
+    "LEMD": {
+        "name": "Adolfo Suárez Madrid–Barajas Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LEMD.svg",
+        "info_url": "https://skyvector.com/airport/LEMD/Adolfo-Suarez-Madrid-Barajas-Airport"
+    },
+    "LEMG": {
+        "name": "Málaga Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/LEMG.svg",
+        "info_url": "https://skyvector.com/airport/LEMG/Malaga-Airport"
+    },
+    "MMMX": {
+        "name": "Mexico City International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/MMMX.svg",
+        "info_url": "https://skyvector.com/airport/MMMX/Mexico-City-International-Airport"
+    },
+    "NZAA": {
+        "name": "Auckland Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/NZAA.svg",
+        "info_url": "https://skyvector.com/airport/NZAA/Auckland-Airport"
+    },
+    "NZQN": {
+        "name": "Queenstown Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/NZQN.svg",
+        "info_url": "https://skyvector.com/airport/NZQN/Queenstown-Airport"
+    },
+    "OBBI": {
+        "name": "Bahrain International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/OBBI.svg",
+        "info_url": "https://skyvector.com/airport/OBBI/Bahrain-International-Airport"
+    },
+    "OEGS": {
+        "name": "King Khalid International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/OERK.svg",
+        "info_url": "https://skyvector.com/airport/OERK/King-Khalid-International-Airport"
+    },
+    "OEMA": {
+        "name": "King Abdulaziz International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/OEJN.svg",
+        "info_url": "https://skyvector.com/airport/OEJN/King-Abdulaziz-International-Airport"
+    },
+    "OJAI": {
+        "name": "Queen Alia International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/OJAI.svg",
+        "info_url": "https://skyvector.com/airport/OJAI/Queen-Alia-International-Airport"
+    },
+    "OKBK": {
+        "name": "Kuwait International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/OKBK.svg",
+        "info_url": "https://skyvector.com/airport/OKBK/Kuwait-International-Airport"
+    },
+    "OMAA": {
+        "name": "Abu Dhabi International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/OMAA.svg",
+        "info_url": "https://skyvector.com/airport/OMAA/Abu-Dhabi-International-Airport"
+    },
+    "OMDB": {
+        "name": "Dubai International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/OMDB.svg",
+        "info_url": "https://skyvector.com/airport/OMDB/Dubai-International-Airport"
+    },
+    "OOMS": {
+        "name": "Muscat International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/OOMS.svg",
+        "info_url": "https://skyvector.com/airport/OOMS/Muscat-International-Airport"
+    },
+    "OSL": {
+        "name": "Oslo Airport, Gardermoen",
+        "taxi_chart_url": "https://opennav.com/diagrams/ENGM.svg",
+        "info_url": "https://skyvector.com/airport/ENGM/Oslo-Airport-Gardermoen"
+    },
+    "OTHH": {
+        "name": "Hamad International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/OTHH.svg",
+        "info_url": "https://skyvector.com/airport/OTHH/Hamad-International-Airport"
+    },
+    "RCTP": {
+        "name": "Taiwan Taoyuan International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/RCTP.svg",
+        "info_url": "https://skyvector.com/airport/RCTP/Taiwan-Taoyuan-International-Airport"
+    },
+    "RJAA": {
+        "name": "Narita International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/RJAA.svg",
+        "info_url": "https://skyvector.com/airport/RJAA/Narita-International-Airport"
+    },
+    "RJBB": {
+        "name": "Kansai International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/RJBB.svg",
+        "info_url": "https://skyvector.com/airport/RJBB/Kansai-International-Airport"
+    },
+    "RJTT": {
+        "name": "Tokyo Haneda Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/RJTT.svg",
+        "info_url": "https://skyvector.com/airport/RJTT/Tokyo-Haneda-Airport"
+    },
+    "RKSI": {
+        "name": "Seoul Incheon International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/RKSI.svg",
+        "info_url": "https://skyvector.com/airport/RKSI/Seoul-Incheon-International-Airport"
+    },
+    "RKSS": {
+        "name": "Gimpo International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/RKSS.svg",
+        "info_url": "https://skyvector.com/airport/RKSS/Gimpo-International-Airport"
+    },
+    "ROAH": {
+        "name": "Naha Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ROAH.svg",
+        "info_url": "https://skyvector.com/airport/ROAH/Naha-Airport"
+    },
+    "RPLL": {
+        "name": "Ninoy Aquino International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/RPLL.svg",
+        "info_url": "https://skyvector.com/airport/RPLL/Ninoy-Aquino-International-Airport"
+    },
+    "SAEZ": {
+        "name": "Ministro Pistarini International Airport (Ezeiza)",
+        "taxi_chart_url": "https://opennav.com/diagrams/SAEZ.svg",
+        "info_url": "https://skyvector.com/airport/SAEZ/Ministro-Pistarini-International-Airport-Ezeiza"
+    },
+    "SBGR": {
+        "name": "São Paulo–Guarulhos International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/SBGR.svg",
+        "info_url": "https://skyvector.com/airport/SBGR/Sao-Paulo-Guarulhos-International-Airport"
+    },
+    "SCLP": {
+        "name": "Santiago International Airport (Arturo Merino Benítez)",
+        "taxi_chart_url": "https://opennav.com/diagrams/SCEL.svg",
+        "info_url": "https://skyvector.com/airport/SCEL/Santiago-International-Airport-Arturo-Merino-Benitez"
+    },
+    "SKBO": {
+        "name": "El Dorado International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/SKBO.svg",
+        "info_url": "https://skyvector.com/airport/SKBO/El-Dorado-International-Airport"
+    },
+    "SPJC": {
+        "name": "Jorge Chávez International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/SPJC.svg",
+        "info_url": "https://skyvector.com/airport/SPJC/Jorge-Chavez-International-Airport"
+    },
+    "SUMU": {
+        "name": "Carrasco International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/SUMU.svg",
+        "info_url": "https://skyvector.com/airport/SUMU/Carrasco-International-Airport"
+    },
+    "UKBB": {
+        "name": "Boryspil International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/UKBB.svg",
+        "info_url": "https://skyvector.com/airport/UKBB/Boryspil-International-Airport"
+    },
+    "UMMS": {
+        "name": "Minsk National Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/UMMS.svg",
+        "info_url": "https://skyvector.com/airport/UMMS/Minsk-National-Airport"
+    },
+    "URSS": {
+        "name": "Sochi International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/URSS.svg",
+        "info_url": "https://skyvector.com/airport/URSS/Sochi-International-Airport"
+    },
+    "UUDD": {
+        "name": "Moscow Domodedovo Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/UUDD.svg",
+        "info_url": "https://skyvector.com/airport/UUDD/Moscow-Domodedovo-Airport"
+    },
+    "UUEE": {
+        "name": "Sheremetyevo International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/UUEE.svg",
+        "info_url": "https://skyvector.com/airport/UUEE/Sheremetyevo-International-Airport"
+    },
+    "VABB": {
+        "name": "Chhatrapati Shivaji Maharaj International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/VABB.svg",
+        "info_url": "https://skyvector.com/airport/VABB/Chhatrapati-Shivaji-Maharaj-International-Airport"
+    },
+    "VDPP": {
+        "name": "Phnom Penh International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/VDPP.svg",
+        "info_url": "https://skyvector.com/airport/VDPP/Phnom-Penh-International-Airport"
+    },
+    "VHHH": {
+        "name": "Hong Kong International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/VHHH.svg",
+        "info_url": "https://skyvector.com/airport/VHHH/Hong-Kong-International-Airport"
+    },
+    "VIDP": {
+        "name": "Indira Gandhi International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/VIDP.svg",
+        "info_url": "https://skyvector.com/airport/VIDP/Indira-Gandhi-International-Airport"
+    },
+    "VNKT": {
+        "name": "Tribhuvan International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/VNKT.svg",
+        "info_url": "https://skyvector.com/airport/VNKT/Tribhuvan-International-Airport"
+    },
+    "VTBD": {
+        "name": "Don Mueang International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/VTBD.svg",
+        "info_url": "https://skyvector.com/airport/VTBD/Don-Mueang-International-Airport"
+    },
+    "VTBS": {
+        "name": "Suvarnabhumi Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/VTBS.svg",
+        "info_url": "https://skyvector.com/airport/VTBS/Suvarnabhumi-Airport"
+    },
+    "VTCC": {
+        "name": "Chiang Mai International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/VTCC.svg",
+        "info_url": "https://skyvector.com/airport/VTCC/Chiang-Mai-International-Airport"
+    },
+    "VVTS": {
+        "name": "Tan Son Nhat International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/VVTS.svg",
+        "info_url": "https://skyvector.com/airport/VVTS/Tan-Son-Nhat-International-Airport"
+    },
+    "WARR": {
+        "name": "Ngurah Rai International Airport (Denpasar)",
+        "taxi_chart_url": "https://opennav.com/diagrams/WARR.svg",
+        "info_url": "https://skyvector.com/airport/WARR/Ngurah-Rai-International-Airport"
+    },
+    "WIII": {
+        "name": "Soekarno–Hatta International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/WIII.svg",
+        "info_url": "https://skyvector.com/airport/WIII/Soekarno-Hatta-International-Airport"
+    },
+    "WMKK": {
+        "name": "Kuala Lumpur International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/WMKK.svg",
+        "info_url": "https://skyvector.com/airport/WMKK/Kuala-Lumpur-International-Airport"
+    },
+    "WSSS": {
+        "name": "Singapore Changi Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/WSSS.svg",
+        "info_url": "https://skyvector.com/airport/WSSS/Singapore-Changi-Airport"
+    },
+    "YBBN": {
+        "name": "Brisbane Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/YBBN.svg",
+        "info_url": "https://skyvector.com/airport/YBBN/Brisbane-Airport"
+    },
+    "YMML": {
+        "name": "Melbourne Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/YMML.svg",
+        "info_url": "https://skyvector.com/airport/YMML/Melbourne-Airport"
+    },
+    "YPAD": {
+        "name": "Adelaide Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/YPAD.svg",
+        "info_url": "https://skyvector.com/airport/YPAD/Adelaide-Airport"
+    },
+    "YPPH": {
+        "name": "Perth Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/YPPH.svg",
+        "info_url": "https://skyvector.com/airport/YPPH/Perth-Airport"
+    },
+    "YSSY": {
+        "name": "Sydney Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/YSSY.svg",
+        "info_url": "https://skyvector.com/airport/YSSY/Sydney-Airport"
+    },
+    "ZBAA": {
+        "name": "Beijing Capital International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZBAA.svg",
+        "info_url": "https://skyvector.com/airport/ZBAA/Beijing-Capital-International-Airport"
+    },
+    "ZCKC": {
+        "name": "Chongqing Jiangbei International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZUCK.svg",
+        "info_url": "https://skyvector.com/airport/ZUCK/Chongqing-Jiangbei-International-Airport"
+    },
+    "ZGGG": {
+        "name": "Guangzhou Baiyun International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZGGG.svg",
+        "info_url": "https://skyvector.com/airport/ZGGG/Guangzhou-Baiyun-International-Airport"
+    },
+    "ZGSZ": {
+        "name": "Shenzhen Bao'an International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZGSZ.svg",
+        "info_url": "https://skyvector.com/airport/ZGSZ/Shenzhen-Baoan-International-Airport"
+    },
+    "ZSHC": {
+        "name": "Hangzhou Xiaoshan International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZSHC.svg",
+        "info_url": "https://skyvector.com/airport/ZSHC/Hangzhou-Xiaoshan-International-Airport"
+    },
+    "ZLXY": {
+        "name": "Xi'an Xianyang International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZLXY.svg",
+        "info_url": "https://skyvector.com/airport/ZLXY/Xian-Xianyang-International-Airport"
+    },
+    "ZPPP": {
+        "name": "Kunming Changshui International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZPPP.svg",
+        "info_url": "https://skyvector.com/airport/ZPPP/Kunming-Changshui-International-Airport"
+    },
+    "ZSPD": {
+        "name": "Shanghai Pudong International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZSPD.svg",
+        "info_url": "https://skyvector.com/airport/ZSPD/Shanghai-Pudong-International-Airport"
+    },
+    "ZSSS": {
+        "name": "Shanghai Hongqiao International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZSSS.svg",
+        "info_url": "https://skyvector.com/airport/ZSSS/Shanghai-Hongqiao-International-Airport"
+    },
+    "ZUTF": {
+        "name": "Chengdu Tianfu International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZUTF.svg",
+        "info_url": "https://skyvector.com/airport/ZUTF/Chengdu-Tianfu-International-Airport"
+    },
+    "ZUUU": {
+        "name": "Chengdu Shuangliu International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/ZUUU.svg",
+        "info_url": "https://skyvector.com/airport/ZUUU/Chengdu-Shuangliu-International-Airport"
+    }
+}   
