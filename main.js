@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         GeoFS Airport Taxi Charts (Button Above Pads & Post-Search Debugging)
+// @name         GeoFS Charts
 // @namespace    http://tampermonkey.net/
-// @version      1.2 // Updated version for precise placement
+// @version      0.1
 // @description  Display airport taxi charts in GeoFS, with a search feature for ICAO codes, fetching data from GitHub.
 // @author       Your Name
 // @match        https://www.geo-fs.com/geofs.php?v=*
@@ -24,6 +24,7 @@
     let airportChartData = {};
     let uiCreated = false;
     let buttonReinsertionInterval;
+    let lastSearchedIcao = ''; // New variable to store the last searched ICAO
 
     // --- Helper Functions ---
     function loadChartData() {
@@ -95,11 +96,24 @@
 
     function toggleSearchPanel() {
         const searchPanel = document.getElementById(SEARCH_PANEL_ID);
+        const icaoInput = document.getElementById('geofs-icao-search-input');
+
         if (!searchPanel) {
             console.error('GeoFS Taxi Charts: Search panel div not found!');
             return;
         }
-        searchPanel.style.display = searchPanel.style.display === 'block' ? 'none' : 'block';
+
+        if (searchPanel.style.display === 'block') {
+            // Panel is currently open, so close it
+            searchPanel.style.display = 'none';
+        } else {
+            // Panel is currently closed, so open it and populate with last search
+            searchPanel.style.display = 'block';
+            if (icaoInput) {
+                icaoInput.value = lastSearchedIcao; // Set the input value to the last searched ICAO
+                icaoInput.focus(); // Optionally focus the input when panel opens
+            }
+        }
         console.log(`GeoFS Taxi Charts: Search panel display set to: ${searchPanel.style.display}`);
     }
 
@@ -190,7 +204,7 @@
         return true;
     }
 
-    function createOtherUIElements() {
+function createOtherUIElements() {
         if (document.getElementById(SEARCH_PANEL_ID) && document.getElementById(CHART_DISPLAY_ID)) {
             return;
         }
@@ -219,7 +233,7 @@
         `;
         closeSearchButton.onmouseover = function() { this.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'; };
         closeSearchButton.onmouseout = function() { this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'; };
-        closeSearchButton.onclick = toggleSearchPanel;
+        closeSearchButton.onclick = toggleSearchPanel; // Close search panel
         searchPanel.appendChild(closeSearchButton);
 
         const inputLabel = document.createElement('label');
@@ -237,7 +251,21 @@
             color: white; border-radius: 5px; margin-right: 10px;
             width: 150px; text-transform: uppercase; font-size: 1em;
         `;
+
+        // --- NEW CODE FOR EVENT STOPPING ---
+        icaoInput.addEventListener('keydown', (event) => {
+            event.stopPropagation(); // Prevent the event from bubbling up to the game
+        });
+        icaoInput.addEventListener('keyup', (event) => {
+            event.stopPropagation(); // Prevent the event from bubbling up to the game
+        });
+        // You might also want to stop 'keypress'
         icaoInput.addEventListener('keypress', (event) => {
+            event.stopPropagation(); // Prevent the event from bubbling up to the game
+        });
+        // --- END NEW CODE ---
+
+        icaoInput.addEventListener('keypress', (event) => { // This listener was already here, keep it for 'Enter' key
             if (event.key === 'Enter') {
                 searchButton.click();
             }
@@ -257,9 +285,9 @@
         searchButton.onclick = () => {
             const icao = icaoInput.value.trim().toUpperCase();
             if (icao) {
+                lastSearchedIcao = icao; // Store the searched ICAO
                 displayChart(icao);
-                toggleSearchPanel();
-                icaoInput.value = '';
+                toggleSearchPanel(); // Close the search panel
             } else {
                 alert('Please enter an ICAO code.');
             }
@@ -380,11 +408,13 @@
         const searchPanel = document.getElementById(SEARCH_PANEL_ID);
         const chartDisplay = document.getElementById(CHART_DISPLAY_ID);
         const modButton = document.getElementById(MOD_BUTTON_ID);
+        const icaoInput = document.getElementById('geofs-icao-search-input'); // Get the input element
 
         if (searchPanel && searchPanel.style.display === 'block' &&
             !searchPanel.contains(event.target) && event.target !== modButton) {
-            console.log('GeoFS Taxi Charts: Closing search panel via outside click.');
-            toggleSearchPanel();
+            console.log('GeoFS Taxi Charts: Closing search panel via outside click, retaining input.');
+            // Don't clear icaoInput.value here
+            toggleSearchPanel(); // This will now just close the panel
         }
 
         if (chartDisplay && chartDisplay.style.display === 'block' &&
