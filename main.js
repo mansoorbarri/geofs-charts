@@ -1,10 +1,12 @@
 // ==UserScript==
-// @name         GeoFS Airport Taxi Charts (GitHub Data)
+// @name         GeoFS Airport Taxi Charts (Button Above Pads & Post-Search Debugging)
 // @namespace    http://tampermonkey.net/
-// @version      0.2
-// @description  Display airport taxi charts in GeoFS, fetching data from a GitHub JSON file.
-// @author       Mansoor Barri
-// @match        https://geo-fs.com/*
+// @version      1.2 // Updated version for precise placement
+// @description  Display airport taxi charts in GeoFS, with a search feature for ICAO codes, fetching data from GitHub.
+// @author       Your Name
+// @match        https://www.geo-fs.com/geofs.php?v=*
+// @match        https://*.geo-fs.com/geofs.php*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=geo-fs.com
 // @grant        GM_xmlhttpRequest
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -13,16 +15,17 @@
     'use strict';
 
     // --- Configuration ---
-    const CHART_DATA_URL = 'https://raw.githubusercontent.com/mansoorbarri/geofs-charts/refs/heads/main/charts.json'; // <--- IMPORTANT: REPLACE THIS WITH YOUR RAW JSON URL
+    const CHART_DATA_URL = 'https://raw.githubusercontent.com/mansoorbarri/geofs-charts/refs/heads/main/charts.json';
+
+    const MOD_BUTTON_ID = 'geofs-taxi-chart-mod-button';
+    const SEARCH_PANEL_ID = 'geofs-taxi-chart-search-panel';
     const CHART_DISPLAY_ID = 'geofs-taxi-chart-display';
-    const CHART_BUTTON_ID = 'geofs-taxi-chart-button';
-    let airportChartData = {}; // This will store our loaded JSON data
+
+    let airportChartData = {};
+    let uiCreated = false;
+    let buttonReinsertionInterval;
 
     // --- Helper Functions ---
-
-    /**
-     * Fetches airport chart data from the specified GitHub JSON URL.
-     */
     function loadChartData() {
         return new Promise((resolve, reject) => {
             GM_xmlhttpRequest({
@@ -31,7 +34,8 @@
                 onload: function(response) {
                     try {
                         airportChartData = JSON.parse(response.responseText);
-                        console.log('GeoFS Taxi Charts: Chart data loaded successfully.', airportChartData);
+                        console.log('GeoFS Taxi Charts: Chart data loaded successfully. Number of airports:', Object.keys(airportChartData).length);
+                        console.log('GeoFS Taxi Charts: First 5 airport ICAOs loaded:', Object.keys(airportChartData).slice(0, 5));
                         resolve();
                     } catch (e) {
                         console.error('GeoFS Taxi Charts: Error parsing JSON data:', e);
@@ -39,156 +43,362 @@
                     }
                 },
                 onerror: function(response) {
-                    console.error('GeoFS Taxi Charts: Error fetching chart data:', response.status, response.statusText);
+                    console.error('GeoFS Taxi Charts: Error fetching chart data:', response.status, response.statusText, response);
                     reject(new Error(`Failed to fetch chart data: ${response.status} ${response.statusText}`));
                 }
             });
         });
     }
 
-    /**
-     * Attempts to get the current airport ICAO code from GeoFS.
-     */
-    function getCurrentAirportICAO() {
-        // This part is the same as before, as it relies on GeoFS's internal structure.
-        // It's still the most fragile part of the mod.
-        if (window.geofs && window.geofs.flightPlan && window.geofs.flightPlan.route && window.geofs.flightPlan.route.length > 0) {
-            const lastWaypoint = window.geofs.flightPlan.route[window.geofs.flightPlan.route.length - 1];
-            if (lastWaypoint && lastWaypoint.type === 'DST' && lastWaypoint.ident) {
-                return lastWaypoint.ident.toUpperCase();
-            }
-        }
-        // If you found other reliable ways during your inspection, add them here.
-        // E.g., if geofs.currentAirport.icao exists:
-        // if (window.geofs && window.geofs.currentAirport && window.geofs.currentAirport.icao) {
-        //     return window.geofs.currentAirport.icao.toUpperCase();
-        // }
-
-
-        console.warn("Could not determine current airport ICAO. Ensure a flight plan is set to a destination airport.");
-        return null;
-    }
-
     function displayChart(icao) {
-        const airportInfo = airportChartData[icao];
+        console.log(`GeoFS Taxi Charts: displayChart called for ICAO: ${icao}`);
+        const airportInfo = airportChartData[icao.toUpperCase()];
         const displayDiv = document.getElementById(CHART_DISPLAY_ID);
 
-        if (airportInfo && airportInfo.taxi_chart_url) {
-            const chartHtml = `<img src="${airportInfo.taxi_chart_url}" alt="Taxi Chart for ${icao}" style="max-width: 100%; height: auto;">`;
-            const infoLink = airportInfo.info_url ? `<p><a href="${airportInfo.info_url}" target="_blank" style="color: lightblue;">More info for ${airportInfo.name || icao}</a></p>` : '';
-            displayDiv.innerHTML = `
-                <p>Taxi Chart for ${airportInfo.name || icao}</p>
-                ${chartHtml}
-                ${infoLink}
-            `;
-            displayDiv.style.display = 'block'; // Show the panel
+        if (!displayDiv) {
+            console.error('GeoFS Taxi Charts: Chart display div not found!');
+            return;
+        }
+
+        if (airportInfo) {
+            console.log('GeoFS Taxi Charts: Airport info found for ICAO:', icao, airportInfo);
+            if (airportInfo.taxi_chart_url) {
+                console.log('GeoFS Taxi Charts: Taxi chart URL found:', airportInfo.taxi_chart_url);
+                const chartHtml = `<img src="${airportInfo.taxi_chart_url}" alt="Taxi Chart for ${icao}" style="max-width: 100%; height: auto;">`;
+                const infoLink = airportInfo.info_url ? `<p><a href="${airportInfo.info_url}" target="_blank" style="color: lightblue;">More info for ${airportInfo.name || icao}</a></p>` : '';
+                displayDiv.innerHTML = `
+                    <p>Taxi Chart for ${airportInfo.name || icao.toUpperCase()}</p>
+                    ${chartHtml}
+                    ${infoLink}
+                `;
+                displayDiv.style.display = 'block';
+            } else {
+                console.warn('GeoFS Taxi Charts: No taxi_chart_url found for ICAO:', icao);
+                displayDiv.innerHTML = `<p>No taxi chart URL found for ${icao.toUpperCase()}.</p>`;
+                displayDiv.style.display = 'block';
+            }
         } else {
-            displayDiv.innerHTML = `<p>No taxi chart found for ${icao}.</p>`;
+            console.warn('GeoFS Taxi Charts: No airport data found for ICAO:', icao.toUpperCase());
+            displayDiv.innerHTML = `<p>No airport data found for ${icao.toUpperCase()}.</p>`;
             displayDiv.style.display = 'block';
         }
+        displayDiv.style.setProperty('display', 'block', 'important');
+        displayDiv.style.setProperty('z-index', '100000', 'important');
+        displayDiv.style.setProperty('background-color', 'rgba(100, 0, 0, 0.9)', 'important'); // Reddish tint
+        console.log('GeoFS Taxi Charts: Chart display panel forced visible.');
     }
 
     function hideChart() {
         document.getElementById(CHART_DISPLAY_ID).style.display = 'none';
+        console.log('GeoFS Taxi Charts: Chart display panel hidden.');
     }
 
-    // --- UI Creation ---
-
-    function createUI() {
-        const existingPanel = document.querySelector('.geofs-ui-panel');
-        if (existingPanel) {
-            const button = document.createElement('button');
-            button.id = CHART_BUTTON_ID;
-            button.className = 'geofs-button';
-            button.innerText = 'Taxi Chart';
-            button.title = 'Show Airport Taxi Chart';
-            button.onclick = () => {
-                const currentICAO = getCurrentAirportICAO();
-                if (currentICAO) {
-                    displayChart(currentICAO);
-                } else {
-                    alert('Could not determine current airport. Please ensure you are near an airport or have a flight plan set.');
-                }
-            };
-            existingPanel.appendChild(button);
-        } else {
-            console.error('Could not find GeoFS UI panel to attach button.');
+    function toggleSearchPanel() {
+        const searchPanel = document.getElementById(SEARCH_PANEL_ID);
+        if (!searchPanel) {
+            console.error('GeoFS Taxi Charts: Search panel div not found!');
+            return;
         }
+        searchPanel.style.display = searchPanel.style.display === 'block' ? 'none' : 'block';
+        console.log(`GeoFS Taxi Charts: Search panel display set to: ${searchPanel.style.display}`);
+    }
+
+    // --- Core UI Creation / Re-creation Logic ---
+    function createModButtonAndPanels() {
+        const targetPanel = document.querySelector('.geofs-ui-right');
+        const referenceElement = document.querySelector('.geofs-pads-container'); // Element we want to insert before
+        let modButton = document.getElementById(MOD_BUTTON_ID);
+
+        if (!targetPanel) {
+            return false;
+        }
+
+        // Only create if it doesn't exist AND the reference element is found
+        if (!modButton && referenceElement) {
+            modButton = document.createElement('button');
+            modButton.id = MOD_BUTTON_ID;
+            modButton.className = 'geofs-button geofs-icon';
+            modButton.innerHTML = '&#x1F50D;'; // Magnifying glass icon (Unicode)
+            modButton.title = 'Search Airport Taxi Charts';
+            modButton.onclick = toggleSearchPanel;
+
+            // Basic styling for GeoFS button, adjust margins as needed
+            modButton.style.cssText = `
+                font-size: 1.2em;
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                line-height: 40px;
+                margin-left: 5px; /* Spacing from the left */
+                margin-bottom: 10px; /* Spacing above the pads container */
+                box-sizing: border-box;
+                z-index: 999;
+                background-color: grey !important; /* Blue for 'attempted re-insertion' */
+                transparency: 50%
+                color: white !important;
+                border: 2px solid white !important;
+                box-shadow: 0 0 10px rgba(255,255,0,0.5) !important;
+            `;
+
+            targetPanel.insertBefore(modButton, referenceElement); // Insert before the pads container
+            console.log('GeoFS Taxi Charts: Mod button CREATED and inserted before .geofs-pads-container.');
+        } else if (modButton && referenceElement && !targetPanel.contains(modButton)) {
+            // If button exists but detached and reference element is there, re-insert
+            console.log('GeoFS Taxi Charts: Mod button found but not in .geofs-ui-right or not before .geofs-pads-container. Re-inserting.');
+            targetPanel.insertBefore(modButton, referenceElement);
+            modButton.style.backgroundColor = '#FF5733 !important'; // Orange for 're-inserted'
+        } else if (modButton && targetPanel.contains(modButton)) {
+            // If button exists and is already in the right place, keep its color green
+            // console.log('GeoFS Taxi Charts: Mod button already exists and is correctly placed.');
+            modButton.style.backgroundColor = '#4CAF50 !important'; // Green for 'stable'
+        } else if (!referenceElement) {
+            console.warn('GeoFS Taxi Charts: .geofs-pads-container not found. Cannot precisely place button. Appending to .geofs-ui-right instead.');
+            // Fallback: If pads container isn't there, just append to .geofs-ui-right
+            if (!modButton) {
+                modButton = document.createElement('button');
+                modButton.id = MOD_BUTTON_ID;
+                modButton.className = 'geofs-button geofs-icon';
+                modButton.innerHTML = '&#x1F50D;';
+                modButton.title = 'Search Airport Taxi Charts';
+                modButton.onclick = toggleSearchPanel;
+                modButton.style.cssText = `
+                    font-size: 1.2em; padding: 5px 10px; display: flex; align-items: center;
+                    justify-content: center; height: 40px; line-height: 40px; margin-left: 5px;
+                    box-sizing: border-box; z-index: 999; background-color: #008CBA !important;
+                    color: white !important; border: 2px solid yellow !important;
+                    box-shadow: 0 0 10px rgba(255,255,0,0.5) !important;
+                `;
+            }
+            targetPanel.appendChild(modButton);
+        }
+
+
+        const checkButton = document.getElementById(MOD_BUTTON_ID);
+        if (checkButton) {
+            const computedStyle = window.getComputedStyle(checkButton);
+            if (computedStyle.display === 'none' || computedStyle.opacity === '0' || computedStyle.visibility === 'hidden' || parseInt(computedStyle.width) === 0 || parseInt(computedStyle.height) === 0) {
+                console.warn('GeoFS Taxi Charts: WARNING: Mod button appears to be hidden or zero-sized. Forcing visibility.');
+                checkButton.style.setProperty('display', 'flex', 'important');
+                checkButton.style.setProperty('opacity', '1', 'important');
+                checkButton.style.setProperty('visibility', 'visible', 'important');
+                checkButton.style.setProperty('width', '40px', 'important');
+                checkButton.style.setProperty('height', '40px', 'important');
+            }
+        }
+        return true;
+    }
+
+    function createOtherUIElements() {
+        if (document.getElementById(SEARCH_PANEL_ID) && document.getElementById(CHART_DISPLAY_ID)) {
+            return;
+        }
+
+        console.log('GeoFS Taxi Charts: Creating search panel and chart display.');
+
+        const searchPanel = document.createElement('div');
+        searchPanel.id = SEARCH_PANEL_ID;
+        searchPanel.style.cssText = `
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.95); border: 2px solid #555; padding: 25px;
+            z-index: 100002; color: white; display: none; border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); text-align: center;
+            min-width: 300px;
+        `;
+        document.body.appendChild(searchPanel);
+
+        const closeSearchButton = document.createElement('button');
+        closeSearchButton.innerText = 'X';
+        closeSearchButton.style.cssText = `
+            position: absolute; top: 8px; right: 8px;
+            background: rgba(255, 255, 255, 0.2); border: none; color: white;
+            font-size: 1.5em; cursor: pointer; width: 35px; height: 35px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            transition: background-color 0.2s;
+        `;
+        closeSearchButton.onmouseover = function() { this.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'; };
+        closeSearchButton.onmouseout = function() { this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'; };
+        closeSearchButton.onclick = toggleSearchPanel;
+        searchPanel.appendChild(closeSearchButton);
+
+        const inputLabel = document.createElement('label');
+        inputLabel.innerText = 'Enter ICAO Code: ';
+        inputLabel.style.marginRight = '10px';
+        inputLabel.style.fontSize = '1.1em';
+        searchPanel.appendChild(inputLabel);
+
+        const icaoInput = document.createElement('input');
+        icaoInput.id = 'geofs-icao-search-input';
+        icaoInput.type = 'text';
+        icaoInput.placeholder = 'e.g., EGLL, KSFO';
+        icaoInput.style.cssText = `
+            padding: 10px; border: 1px solid #777; background-color: #333;
+            color: white; border-radius: 5px; margin-right: 10px;
+            width: 150px; text-transform: uppercase; font-size: 1em;
+        `;
+        icaoInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                searchButton.click();
+            }
+        });
+        searchPanel.appendChild(icaoInput);
+
+        const searchButton = document.createElement('button');
+        searchButton.innerText = 'Search';
+        searchButton.className = 'geofs-button';
+        searchButton.style.cssText = `
+            padding: 10px 20px; font-size: 1em; border-radius: 5px;
+            background-color: #007bff; color: white; border: none; cursor: pointer;
+            transition: background-color 0.2s;
+        `;
+        searchButton.onmouseover = function() { this.style.backgroundColor = '#0056b3'; };
+        searchButton.onmouseout = function() { this.style.backgroundColor = '#007bff'; };
+        searchButton.onclick = () => {
+            const icao = icaoInput.value.trim().toUpperCase();
+            if (icao) {
+                displayChart(icao);
+                toggleSearchPanel();
+                icaoInput.value = '';
+            } else {
+                alert('Please enter an ICAO code.');
+            }
+        };
+        searchPanel.appendChild(searchButton);
 
         const chartDisplayDiv = document.createElement('div');
         chartDisplayDiv.id = CHART_DISPLAY_ID;
         chartDisplayDiv.style.cssText = `
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            border: 2px solid #333;
-            padding: 15px;
-            z-index: 10000;
-            max-width: 90vw;
-            max-height: 90vh;
-            overflow: auto;
-            color: white;
-            display: none;
-            border-radius: 8px; /* Slightly rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.85); border: 2px solid #555; padding: 15px;
+            z-index: 100000; max-width: 95vw; max-height: 95vh; overflow: auto;
+            color: white; display: none; border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         `;
         document.body.appendChild(chartDisplayDiv);
 
-        const closeButton = document.createElement('button');
-        closeButton.innerText = 'X';
-        closeButton.style.cssText = `
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            font-size: 1.2em;
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%; /* Circular button */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        const closeChartButton = document.createElement('button');
+        closeChartButton.innerText = 'X';
+        closeChartButton.style.cssText = `
+            position: absolute; top: 8px; right: 8px;
+            background: rgba(255, 255, 255, 0.2); border: none; color: white;
+            font-size: 1.5em; cursor: pointer; width: 35px; height: 35px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            transition: background-color 0.2s;
         `;
-        closeButton.onmouseover = function() { this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'; };
-        closeButton.onmouseout = function() { this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; };
-        closeButton.onclick = hideChart;
-        chartDisplayDiv.appendChild(closeButton);
+        closeChartButton.onmouseover = function() { this.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'; };
+        closeChartButton.onmouseout = function() { this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'; };
+        closeChartButton.onclick = hideChart;
+        chartDisplayDiv.appendChild(closeChartButton);
 
-        // Add some basic styling for chart image within the display div
         GM_addStyle(`
             #${CHART_DISPLAY_ID} img {
-                border: 1px solid #555;
-                margin-top: 10px;
-                display: block; /* Remove extra space below image */
+                border: 1px solid #777; margin-top: 10px; display: block;
             }
             #${CHART_DISPLAY_ID} p {
-                margin: 5px 0;
-                text-align: center;
+                margin: 5px 0; text-align: center;
             }
-            #${CHART_BUTTON_ID} {
-                /* Add more specific GeoFS button styling if needed */
+            .geofs-button {
+                background: linear-gradient(to bottom, #4CAF50, #45a049);
+                border: 1px solid #4CAF50;
+                color: white;
                 font-weight: bold;
+                text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.2s;
+                height: 40px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 15px;
+            }
+            .geofs-button:hover {
+                background: linear-gradient(to bottom, #45a049, #3e8e41);
             }
         `);
     }
 
     // --- Main Execution ---
 
-    // Load chart data first, then create UI
-    window.addEventListener('load', () => {
-        loadChartData()
-            .then(() => {
-                setTimeout(createUI, 3000); // Give GeoFS some time to load after data is ready
-            })
-            .catch(error => {
-                console.error('Failed to initialize GeoFS Taxi Charts mod due to data loading error:', error);
-                alert('GeoFS Taxi Charts mod could not load airport data. See console for details.');
+    loadChartData()
+        .then(() => {
+            console.log('GeoFS Taxi Charts: Chart data loaded. Starting UI observation and persistence.');
+
+            createModButtonAndPanels();
+            createOtherUIElements();
+
+            const observer = new MutationObserver((mutationsList, observer) => {
+                const targetPanel = document.querySelector('.geofs-ui-right');
+                const referenceElement = document.querySelector('.geofs-pads-container');
+                if (targetPanel && referenceElement && !uiCreated) {
+                    console.log('GeoFS Taxi Charts: MutationObserver detected .geofs-ui-right and .geofs-pads-container. Triggering button creation/check.');
+                    createModButtonAndPanels();
+                    createOtherUIElements();
+                    uiCreated = true;
+                }
             });
+
+            observer.observe(document.documentElement, { childList: true, subtree: true });
+
+            buttonReinsertionInterval = setInterval(() => {
+                const modButton = document.getElementById(MOD_BUTTON_ID);
+                const targetPanel = document.querySelector('.geofs-ui-right');
+                const referenceElement = document.querySelector('.geofs-pads-container');
+
+                if (!targetPanel) {
+                    return;
+                }
+
+                // Check if button exists and is in the correct parent and position
+                const isButtonCorrectlyPlaced = modButton &&
+                                                targetPanel.contains(modButton) &&
+                                                (referenceElement ? modButton.nextSibling === referenceElement : true); // Check if it's right before reference or just in target if no reference
+
+                if (!isButtonCorrectlyPlaced) {
+                    console.warn('GeoFS Taxi Charts: Persistent check: Mod button disappeared or was detached/misplaced from .geofs-ui-right! Attempting re-insertion.');
+                    createModButtonAndPanels(); // This will re-insert it
+                }
+            }, 2000);
+
+            setTimeout(() => {
+                if (!uiCreated) {
+                    console.warn('GeoFS Taxi Charts: Long timeout triggered. UI not created by observer or interval. Final attempt at creation.');
+                    createModButtonAndPanels();
+                    createOtherUIElements();
+                    uiCreated = true;
+                }
+            }, 15000);
+
+        })
+        .catch(error => {
+            console.error('Failed to initialize GeoFS Taxi Charts mod due to data loading error:', error);
+            alert('GeoFS Taxi Charts mod could not load airport data. See console for details.');
+        });
+
+    document.addEventListener('click', (event) => {
+        const searchPanel = document.getElementById(SEARCH_PANEL_ID);
+        const chartDisplay = document.getElementById(CHART_DISPLAY_ID);
+        const modButton = document.getElementById(MOD_BUTTON_ID);
+
+        if (searchPanel && searchPanel.style.display === 'block' &&
+            !searchPanel.contains(event.target) && event.target !== modButton) {
+            console.log('GeoFS Taxi Charts: Closing search panel via outside click.');
+            toggleSearchPanel();
+        }
+
+        if (chartDisplay && chartDisplay.style.display === 'block' &&
+            !chartDisplay.contains(event.target) && event.target !== modButton && !searchPanel.contains(event.target) ) {
+             console.log('GeoFS Taxi Charts: Closing chart display via outside click.');
+             hideChart();
+        }
+    });
+
+    window.addEventListener('beforeunload', () => {
+        if (buttonReinsertionInterval) {
+            clearInterval(buttonReinsertionInterval);
+            console.log('GeoFS Taxi Charts: Cleared re-insertion interval.');
+        }
     });
 
 })();
