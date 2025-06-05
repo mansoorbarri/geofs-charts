@@ -933,5 +933,14 @@
         "name": "Jingdezhen Luojia Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/ZSJD.svg",
         "info_url": "https://skyvector.com/airport/ZSJD/Jingdezhen-Luojia-Airport"
+    },
+    "OPKC":{
+        "name": "Karachi Jinnah International. Airport",
+        "taxi_chart_url": "https://html.scribdassets.com/64b1opcq2oalo6yv/images/1-349f406e4e.jpg",
+        "info_url": "https://skyvector.com/airport/OPKC/Karachi-Jinnah-International-Airport"
+    },
+    "OPLA":{
+        "name": "Lahore Aiiap Int'L Airport",
+        "taxi_chart_url": ""
     }
 }
