@@ -1,0 +1,20 @@
+{
+    "EGLL": {
+        "name": "London Heathrow",
+        "taxi_chart_url": "https://i.imgur.com/EGLL_taxi.png",
+        "info_url": "https://example.com/EGLL_info.html"
+    },
+    "KSFO": {
+        "name": "San Francisco International",
+        "taxi_chart_url": "https://i.imgur.com/KSFO_taxi.png",
+        "info_url": "https://example.com/KSFO_info.html"
+    },
+    "EDDM": {
+        "name": "Munich Airport",
+        "taxi_chart_url": "https://i.imgur.com/EDDM_taxi.png"
+    },
+    "NZQN": {
+        "name": "Queenstown Airport",
+        "taxi_chart_url": "https://i.imgur.com/NZQN_taxi.png"
+    }
+}

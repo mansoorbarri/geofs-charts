@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.2
 // @description  Display airport taxi charts in GeoFS, fetching data from a GitHub JSON file.
-// @author       Your Name
+// @author       Mansoor Barri
 // @match        https://geo-fs.com/*
 // @grant        GM_xmlhttpRequest
 // @grant        GM_addStyle
@@ -13,7 +13,7 @@
     'use strict';
 
     // --- Configuration ---
-    const CHART_DATA_URL = 'https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO_NAME/main/charts.json'; // <--- IMPORTANT: REPLACE THIS WITH YOUR RAW JSON URL
+    const CHART_DATA_URL = 'https://raw.githubusercontent.com/mansoorbarri/geofs-charts/refs/heads/main/charts.json'; // <--- IMPORTANT: REPLACE THIS WITH YOUR RAW JSON URL
     const CHART_DISPLAY_ID = 'geofs-taxi-chart-display';
     const CHART_BUTTON_ID = 'geofs-taxi-chart-button';
     let airportChartData = {}; // This will store our loaded JSON data
