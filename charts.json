@@ -446,7 +446,7 @@
     },
     "OPLA": {
         "name": "Lahore / Aiiap Int'L Airport",
-        "taxi_chart_url": "https://html.scribdassets.com/64b1opcq2oalo6yv/images/1-349f406e4e.jpg",
+        "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/opla/taxiways.png?raw=true",
         "info_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/OPLA/taxiways.png?raw=true"
     },
     "OSL": {
