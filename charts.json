@@ -1,4 +1,74 @@
 {
+    "CYEG": {
+        "name": "Edmonton International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/CYEG.svg",
+        "info_url": "https://skyvector.com/airport/CYEG/Edmonton-International-Airport"
+    },
+    "CYFC": {
+        "name": "Fredericton International Airport",
+        "taxi_chart_url": "https://imageserver.fltplan.com/merge/Canada/merge250612/PngCharts/CYFC_AERODROME_CHART.png",
+        "info_url": "https://skyvector.com/airport/CYFC/Fredericton-International-Airport"
+    },
+    "CYHZ": {
+        "name": "Halifax Stanfield International Airport",
+        "taxi_chart_url": "https://imageserver.fltplan.com/merge/Canada/merge250612/PngCharts/CYHZ_AERODROME_CHART.png",
+        "info_url": "https://skyvector.com/airport/CYHZ/Halifax-Stanfield-International-Airport"
+    },
+    "CYOW": {
+        "name": "Ottawa Macdonald–Cartier International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/CYOW.svg",
+        "info_url": "https://skyvector.com/airport/CYOW/Ottawa-Macdonald-Cartier-International-Airport"
+    },
+    "CYQM": {
+        "name": "Greater Moncton Roméo LeBlanc International Airport",
+        "taxi_chart_url": "https://imageserver.fltplan.com/merge/Canada/merge250612/PngCharts/CYQM_AERODROME_CHART.png",
+        "info_url": "https://skyvector.com/airport/CYQM/Greater-Moncton-Romeo-LeBlanc-International-Airport"
+    },
+    "CYQX": {
+        "name": "Gander International Airport",
+        "taxi_chart_url": "https://imageserver.fltplan.com/merge/Canada/merge250612/PngCharts/CYQX_AERODROME_CHART.png",
+        "info_url": "https://skyvector.com/airport/CYQX/Gander-International-Airport"
+    },
+    "CYQB": {
+        "name": "Québec/Jean Lesage International Airport",
+        "taxi_chart_url": "https://imageserver.fltplan.com/merge/Canada/merge250612/PngCharts/CYQB_AERODROME_CHART.png",
+        "info_url": "https://skyvector.com/airport/CYQB/Quebec-Jean-Lesage-International-Airport"
+    },
+    "CYUL": {
+        "name": "Montréal–Trudeau International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/CYUL.svg",
+        "info_url": "https://skyvector.com/airport/CYUL/Montreal-Trudeau-International-Airport"
+    },
+    "CYVR": {
+        "name": "Vancouver International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/CYVR.svg",
+        "info_url": "https://skyvector.com/airport/CYVR/Vancouver-International-Airport"
+    },
+    "CYWG": {
+        "name": "Winnipeg International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/CYWG.svg",
+        "info_url": "https://skyvector.com/airport/CYWG/Winnipeg-International-Airport"
+    },
+    "CYYJ": {
+        "name": "Victoria International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/CYYJ.svg",
+        "info_url": "https://skyvector.com/airport/CYYJ/Victoria-International-Airport"
+    },
+    "CYYT": {
+        "name": "St. John's International Airport",
+        "taxi_chart_url": "https://imageserver.fltplan.com/merge/Canada/merge250612/PngCharts/CYYT_AERODROME_CHART.png",
+        "info_url": "https://skyvector.com/airport/CYYT/St-Johns-International-Airport"
+    },
+    "CYYZ": {
+        "name": "Toronto Pearson International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/CYYZ.svg",
+        "info_url": "https://skyvector.com/airport/CYYZ/Toronto-Pearson-International-Airport"
+    },
+    "CYYC": {
+        "name": "Calgary International Airport",
+        "taxi_chart_url": "https://opennav.com/diagrams/CYYC.svg",
+        "info_url": "https://skyvector.com/airport/CYYC/Calgary-YYC-Calgary-International-Airport"
+    },
     "DAAG": {
         "name": "Houari Boumediene Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/DAAG.svg",
