@@ -1,4 +1,4 @@
-//Airports needing fixes: CYQM, CYUL, CYWG, CYYZ, DAAG, DGAA, DNAA, DRRN, DTTA, EDDM, EGCC, EHAM, EKCH, EPWA, FAOR, LPPT, GMMN, GOOY, HKJK, KATL, KCLT, KDEN, KDFW, KJFK, KLAX, KLAS, KMCO, KMIA, KORD, KSFO, KSEA, LFPG, LGAV, LHBP, LIMM, LIRF, LKPR, LLBG, LPPR, LRBS, LROP, LSGG, LSZB, LTFM, LOWW, LYBE, LEBL, LEMG, MMMX, OERK, OJAI, OKBK, OPLA, ENGM, RJTT, RKSS, SAEZ, SCEL, SKBO, SUMU, UKBB, UMMS, URSS, UUEE, VABB, VTBD, VTBS, WARR, WIII, WSSS, YMML, ZUCK, ZGGG, ZGSZ, ZSHC, ZLXY, ZPPP, ZSPD, ZUTF, ZUUU
+//Airports needing fixes: DAAG, DGAA, DNAA, DRRN, DTTA, EDDM, EGCC, EHAM, EKCH, EPWA, FAOR, LPPT, GMMN, GOOY, HKJK, KATL, KCLT, KDEN, KDFW, KJFK, KLAX, KLAS, KMCO, KMIA, KORD, KSFO, KSEA, LFPG, LGAV, LHBP, LIMM, LIRF, LKPR, LLBG, LPPR, LRBS, LROP, LSGG, LSZB, LTFM, LOWW, LYBE, LEBL, LEMG, MMMX, OERK, OJAI, OKBK, OPLA, ENGM, RJTT, RKSS, SAEZ, SCEL, SKBO, SUMU, UKBB, UMMS, URSS, UUEE, VABB, VTBD, VTBS, WARR, WIII, WSSS, YMML, ZUCK, ZGGG, ZGSZ, ZSHC, ZLXY, ZPPP, ZSPD, ZUTF, ZUUU
 
 {
     "CYEG": {
@@ -24,7 +24,7 @@
     "CYQM": {
         "name": "Greater Moncton Roméo LeBlanc International Airport",
         "taxi_chart_url": "https://imageserver.fltplan.com/merge/Canada/merge250612/PngCharts/CYQM_AERODROME_CHART.png",
-        "info_url": "https://skyvector.com/airport/CYQM/Greater-Moncton-Romeo-LeBlanc-International-Airport"
+        "info_url": "https://skyvector.com/airport/CYQM/Moncton-Greater-Moncton-Romeo-Airport"
     },
     "CYQX": {
         "name": "Gander International Airport",
@@ -39,7 +39,7 @@
     "CYUL": {
         "name": "Montréal–Trudeau International Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/CYUL.svg",
-        "info_url": "https://skyvector.com/airport/CYUL/Montreal-Trudeau-International-Airport"
+        "info_url": "https://skyvector.com/airport/CYUL/Montreal-Pierre-Elliott-Trudeau-International-Airport"
     },
     "CYVR": {
         "name": "Vancouver International Airport",
@@ -49,7 +49,7 @@
     "CYWG": {
         "name": "Winnipeg International Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/CYWG.svg",
-        "info_url": "https://skyvector.com/airport/CYWG/Winnipeg-International-Airport"
+        "info_url": "https://skyvector.com/airport/CYWG/Winnipeg-James-Armstrong-Airport"
     },
     "CYYJ": {
         "name": "Victoria International Airport",
@@ -64,7 +64,7 @@
     "CYYZ": {
         "name": "Toronto Pearson International Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/CYYZ.svg",
-        "info_url": "https://skyvector.com/airport/CYYZ/Toronto-Pearson-International-Airport"
+        "info_url": "https://skyvector.com/airport/CYYZ/Toronto-Lester-B-Pearson-International-Airport"
     },
     "CYYC": {
         "name": "Calgary International Airport",
