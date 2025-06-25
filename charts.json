@@ -1,4 +1,4 @@
-//Airports needing fixes: LIRF, LKPR, LLBG, LPPR, LRBS, LROP, LSGG, LSZB, LTFM, LOWW, LYBE, LEBL, LEMG, MMMX, OERK, OJAI, OKBK, OPLA, ENGM, RJTT, RKSS, SAEZ, SCEL, SKBO, SUMU, UKBB, UMMS, URSS, UUEE, VABB, VTBD, VTBS, WARR, WIII, WSSS, YMML, ZUCK, ZGGG, ZGSZ, ZSHC, ZLXY, ZPPP, ZSPD, ZUTF, ZUUU
+//Airports needing fixes: OERK, OJAI, OKBK, OPLA, ENGM, RJTT, RKSS, SAEZ, SCEL, SKBO, SUMU, UKBB, UMMS, URSS, UUEE, VABB, VTBD, VTBS, WARR, WIII, WSSS, YMML, ZUCK, ZGGG, ZGSZ, ZSHC, ZLXY, ZPPP, ZSPD, ZUTF, ZUUU
 
 {
     "CYEG": {
@@ -314,17 +314,17 @@
     "LIRF": {
         "name": "Leonardo da Vinci–Fiumicino Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LIRF.svg",
-        "info_url": "https://skyvector.com/airport/LIRF/Leonardo-da-Vinci-Fiumicino-Airport"
+        "info_url": "https://skyvector.com/airport/LIRF/Roma-Fiumicino-Airport"
     },
     "LKPR": {
         "name": "Václav Havel Airport Prague",
         "taxi_chart_url": "https://opennav.com/diagrams/LKPR.svg",
-        "info_url": "https://skyvector.com/airport/LKPR/Vaclav-Havel-Airport-Prague"
+        "info_url": "https://skyvector.com/airport/LKPR/Praha-Ruzyne-Airport"
     },
     "LLBG": {
         "name": "Ben Gurion Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LLBG.svg",
-        "info_url": "https://skyvector.com/airport/LLBG/Ben-Gurion-Airport"
+        "info_url": "https://skyvector.com/airport/LLBG/Tel-Aviv-Ben-Gurion-Airport"
     },
     "LPPR": {
         "name": "Porto Airport (Francisco Sá Carneiro Airport)",
@@ -332,19 +332,19 @@
         "info_url": "https://skyvector.com/airport/LPPR/Porto-Airport"
     },
     "LRBS": {
-        "name": "Henri Coandă International Airport",
+        "name": "Baneasa-Aurel Vlaicu Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LRBS.svg",
-        "info_url": "https://skyvector.com/airport/LRBS/Henri-Coanda-International-Airport"
+        "info_url": "https://skyvector.com/airport/LRBS/Baneasa-Aurel-Vlaicu-Airport"
     },
     "LROP": {
         "name": "Bucharest Henri Coandă International Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LROP.svg",
-        "info_url": "https://skyvector.com/airport/LROP/Bucharest-Henri-Coanda-International-Airport"
+        "info_url": "https://skyvector.com/airport/LROP/Henri-Coanda-Airport"
     },
     "LSGG": {
         "name": "Geneva Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LSGG.svg",
-        "info_url": "https://skyvector.com/airport/LSGG/Geneva-Airport"
+        "info_url": "https://skyvector.com/airport/LSGG/Geneve-Airport"
     },
     "LSZH": {
         "name": "Zurich Airport",
@@ -354,27 +354,27 @@
     "LSZB": {
         "name": "Bern Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LSZB.svg",
-        "info_url": "https://skyvector.com/airport/LSZB/Bern-Airport"
+        "info_url": "https://skyvector.com/airport/LSZB/Bern-Belp-Airport"
     },
     "LTFM": {
         "name": "Istanbul Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LTFM.svg",
-        "info_url": "https://skyvector.com/airport/LTFM/Istanbul-Airport"
+        "info_url": "https://skyvector.com/airport/LTFM/Istanbul-New-Airport-Airport"
     },
     "LOWW": {
         "name": "Vienna International Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LOWW.svg",
-        "info_url": "https://skyvector.com/airport/LOWW/Vienna-International-Airport"
+        "info_url": "https://skyvector.com/airport/LOWW/Wien-Schwechat-Airport"
     },
     "LYBE": {
         "name": "Belgrade Nikola Tesla Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LYBE.svg",
-        "info_url": "https://skyvector.com/airport/LYBE/Belgrade-Nikola-Tesla-Airport"
+        "info_url": "https://skyvector.com/airport/LYBE/Beograd-Nikola-Tesla-Airport"
     },
     "LEBL": {
         "name": "Josep Tarradellas Barcelona–El Prat Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LEBL.svg",
-        "info_url": "https://skyvector.com/airport/LEBL/Josep-Tarradellas-Barcelona-El-Prat-Airport"
+        "info_url": "https://skyvector.com/airport/LEBL/Barcelona-J-Tarradellas-Elprat-Airport"
     },
     "LEMD": {
         "name": "Adolfo Suárez Madrid–Barajas Airport",
@@ -384,12 +384,12 @@
     "LEMG": {
         "name": "Málaga Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/LEMG.svg",
-        "info_url": "https://skyvector.com/airport/LEMG/Malaga-Airport"
+        "info_url": "https://skyvector.com/airport/LEMG/Malaga-Costa-Del-Sol-Airport"
     },
     "MMMX": {
         "name": "Mexico City International Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/MMMX.svg",
-        "info_url": "https://skyvector.com/airport/MMMX/Mexico-City-International-Airport"
+        "info_url": "https://skyvector.com/airport/MMMX/Benito-Juarez-International-Airport"
     },
     "NZAA": {
         "name": "Auckland Airport",
