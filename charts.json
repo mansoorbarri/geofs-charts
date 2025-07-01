@@ -71,16 +71,13 @@
     },
     "DAAG": {
         "name": "Houari Boumediene Airport",
-        "taxi_chart_url": "https://opennav.com/diagrams/DAAG.svg",
+        "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/daag/taxiways.png?raw=true",
         "info_url": "https://skyvector.com/airport/DAAG/Alger-Houari-Boumediene-Airport"
     },
     "DNAA": {
         "name": "Nnamdi Azikiwe International Airport",
         "taxi_chart_url": "https://opennav.com/diagrams/DNAA.svg",
         "info_url": "https://skyvector.com/airport/DNAA/Abuja-Nnamdi-Azikiwe-Airport"
-    },
-        "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/daag/taxiways.png?raw=true",
-        "info_url": "https://skyvector.com/airport/DAAG/Houari-Boumediene-Airport"
     },
     "DGAA": {
         "name": "Kotoka International Airport",
@@ -477,11 +474,6 @@
         "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/sbgr/taxiways.png?raw=true",
         "info_url": "https://skyvector.com/airport/SBGR/Sao-Paulo-Guarulhos-International-Airport"
     },
-    "SCEL": {
-        "name": "Santiago International Airport (Arturo Merino Benítez)",
-        "taxi_chart_url": "https://opennav.com/diagrams/SCEL.svg",
-        "info_url": "https://skyvector.com/airport/SCEL/Arturo-Merino-Benitez-Airport"
-    },
     "SKBO": {
         "name": "El Dorado International Airport",
         "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/skbo/taxiways.png?raw=true",
@@ -492,14 +484,9 @@
         "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/spjc/taxiways.png?raw=true",
         "info_url": "https://skyvector.com/airport/SPJC/Jorge-Chavez-International-Airport"
     },
-    "SUMU": {
-        "name": "Carrasco International Airport",
-        "taxi_chart_url": "https://opennav.com/diagrams/SUMU.svg",
-        "info_url": "https://skyvector.com/airport/SUMU/Montevideo-Carrasco-L-Berisso-Airport"
-    },
     "UKBB": {
         "name": "Boryspil International Airport",
-        "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/ukbbi/taxiways.png?raw=true",
+        "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/ukbb/taxiways.png?raw=true",
         "info_url": "https://skyvector.com/airport/UKBB/Kyiv-Boryspil-Airport"
     },
     "UMMS": {
