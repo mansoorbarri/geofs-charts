@@ -373,7 +373,7 @@
         "name": "King Fahd International Airport",
         "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/oedf/taxiways.png?raw=true",
         "info_url": "https://skyvector.com/airport/OEDF/King-Fahd-International-Airport"
-  }
+  },
     "OERK": {
         "name": "King Khalid International Airport",
         "taxi_chart_url": "https://github.com/mansoorbarri/geofs-charts/blob/main/charts/oegs/taxiways.png?raw=true",
