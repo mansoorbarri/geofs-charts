@@ -6,6 +6,7 @@
 // @author       MansoorBarri
 // @match        https://www.geo-fs.com/geofs.php?v=*
 // @match        https://*.geo-fs.com/geofs.php*
+// @match        https://geofs-radar.vercel.app/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=geo-fs.com
 // @grant        GM_xmlhttpRequest
 // @grant        GM_addStyle
