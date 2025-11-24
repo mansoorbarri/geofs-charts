@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GeoFS Charts
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Display airport taxi charts in GeoFS, with a search feature for ICAO codes, fetching data from GitHub.
 // @author       MansoorBarri
 // @match        https://www.geo-fs.com/geofs.php?v=*
@@ -9,6 +9,8 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=geo-fs.com
 // @grant        GM_xmlhttpRequest
 // @grant        GM_addStyle
+// @updateURL    https://github.com/mansoorbarri/geofs-charts/raw/refs/heads/main/geofs-charts.user.js
+// @downloadURL  https://github.com/mansoorbarri/geofs-charts/raw/refs/heads/main/geofs-charts.user.js
 // ==/UserScript==
 
 (function() {
